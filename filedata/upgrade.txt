@@ -1,0 +1,45 @@
+﻿;---------------------------------------------------------------------------
+;
+; 永大造价软件的升级方案
+;
+; Author:Mrlong Date:2018-7-18
+;
+; v3.0后的版本
+;
+;每行的格式
+;
+;   Action\Code\Name\webpath\LocatPath\Note\0,1(0=压缩，1=不压缩)\FileStyle 
+;     其中:  动作     Action = (0=覆盖文件,1=打开文件，2=删除文件)
+;                              如Action = 1或2 时，webpath，压缩，文件类型可以不设置               
+;            文件类型 FileStyle =(0=执行文件，1=模板,2=定额库,3=构件库,4=其他) 
+;      Code = * 表示分部(一个分部可能就是一个专业的升级), 以 -1 结束
+;
+;
+;使用的宏变量
+;     %App_Path%=应用软件目录
+;     %DataBase_Path%=库文件目录
+;     %Template_Path%=模板目录
+;     %Market_Path%=价格包目录
+;     %User_Path%=用户目录
+;     %Component_Path%=构件目录
+;     %Sys_TempPath%=系统临时目录
+;
+; 例子:
+;   功能: 下载一个txt文件,打开后，并删除掉
+;   0;*;我的方案;;;;; 
+;   0;1-1;文件1;fileData\更新说明.txt;%App_Path%\更新说明.txt;说明1;1;0
+;   1;1-2;打开更新说明;fileData\更新说明.txt;%App_Path%\更新说明.txt;说明1;1;0
+;   2;1-3;删除更新说明;fileData\更新说明.txt;%App_Path%\更新说明.txt;说明1;1;0
+;   0;-1;;;;;;
+; 
+;-----------------------------------------------------------------------------
+
+0;*;通信定额软件升级(2018-9-29 修正表五表的标题出错);;;;; 
+0;1-1;klys.exe;filedata\KLYS.exe;%App_Path%\klys.exe;执行文件;1;0
+0;1-2;klys.chm;filedata\klys.chm;%App_Path%\klys.chm;帮助文件;1;4
+0;1-3;zjsl.dbi;filedata\zjsl.dbi;%App_Path%\zjsl.dbi;;1;4
+0;1-4;menu.ini;filedata\menu.ini;%App_Path%\menu.ini;;1;4
+
+
+
+0;-1;;;;;;
