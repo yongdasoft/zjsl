@@ -12,7 +12,7 @@ DataBase=.\数据库
 Template=.\模板文件
 UserBak=
 Market=.\用户文件
-Downfile=.\下载文件
+Downfile=..\下载文件
 
 
 ;2.网络
@@ -33,6 +33,8 @@ hasUpgrade=1
 ;历史文件
 [Recentfile]
 Count=5
+0=D:\upgrade\zjsl\filedata\模板文件\Ⅱ.2006计价依据\2006浙江水利模板.mlg
+1=D:\upgrade\zjsl\filedata\用户文件\项目名称....mlg
 
 [dbiFile]
 path=ZJSL.dbi
